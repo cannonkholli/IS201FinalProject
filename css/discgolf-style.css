@@ -1,0 +1,244 @@
+/* =============================================
+   DISC GOLF PAGE — Custom Stylesheet
+   ============================================= */
+
+/* --- CSS Variables & Base Reset --- */
+:root {
+  --green-dark:   #1a3a2a;
+  --green-mid:    #2e6b4f;
+  --green-light:  #4caf7d;
+  --lime:         #a8e063;
+  --cream:        #f5f0e8;
+  --bark:         #6b4226;
+  --sky:          #d0eaf5;
+  --shadow:       0 4px 18px rgba(0,0,0,0.22);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Body & Custom Background Color --- */
+body {
+  background-color: #1b3d2b;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: #2a2a2a;
+  line-height: 1.7;
+}
+
+/* --- Typography: font color & font family --- */
+h1, h2, h3 {
+  font-family: 'Trebuchet MS', 'Lucida Grande', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: var(--lime);           /* font color */
+  text-shadow: 2px 3px 8px rgba(0,0,0,0.55);
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--green-dark);     /* font color */
+  border-left: 5px solid var(--green-light);
+  padding-left: 0.6em;
+  margin-bottom: 0.6em;
+}
+
+h3 {
+  font-size: 1.15rem;
+  color: var(--bark);           /* font color */
+  margin-bottom: 0.4em;
+}
+
+p {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* font family */
+  font-size: 1.05rem;
+  color: #2a2a2a;               /* font color */
+  margin-bottom: 0.8em;
+}
+
+a {
+  color: var(--green-mid);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--lime);
+  text-decoration: underline;
+}
+
+/* =============================================
+   DIV 1 — Header / Hero Banner
+   ============================================= */
+#header-div {
+  background: linear-gradient(135deg, #0f2619 0%, var(--green-mid) 65%, #7dc95e 100%);
+  color: var(--cream);
+  padding: 3rem 2rem 2.2rem;
+  text-align: center;
+  border-bottom: 5px solid var(--lime);
+  box-shadow: var(--shadow);
+}
+
+#header-div .tagline {
+  color: var(--sky);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+/* In-page anchor nav */
+#header-div nav {
+  margin-top: 1.6rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+#header-div nav a {
+  color: var(--lime);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 0.95rem;
+  padding: 0.3em 0.9em;
+  border: 2px solid var(--lime);
+  border-radius: 5px;
+  transition: background 0.2s, color 0.2s;
+}
+
+#header-div nav a:hover {
+  background: var(--lime);
+  color: var(--green-dark);
+  text-decoration: none;
+}
+
+/* =============================================
+   DIV 2 — Main Content Container
+   ============================================= */
+#content-div {
+  max-width: 880px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Reusable content card */
+.card {
+  background: var(--cream);
+  border-radius: 10px;
+  padding: 2rem 2.2rem;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--green-light);
+}
+
+/* --- Lists --- */
+ol {
+  margin: 0.8em 0 0.8em 1.6em;
+  font-family: 'Palatino Linotype', serif;
+  color: #2a2a2a;
+}
+
+ul {
+  margin: 0.4em 0 0.5em 1.9em;
+  font-family: 'Palatino Linotype', serif;
+  color: #3a3a3a;
+}
+
+li { margin-bottom: 0.3em; }
+
+/* Nested-list accent */
+ol > li > ul {
+  border-left: 3px solid var(--green-light);
+  padding-left: 0.7em;
+  margin-top: 0.3em;
+}
+
+/* --- Images --- */
+.disc-img {
+  display: block;
+  max-width: 100%;
+  width: 460px;
+  margin: 1.2rem auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  border: 3px solid var(--green-light);
+}
+
+/* --- YouTube embed wrapper (responsive 16:9) --- */
+.video-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  margin-top: 1rem;
+}
+
+.video-wrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* --- Tableau wrapper --- */
+.tableau-wrap {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  margin-top: 1rem;
+  background: #fff;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* =============================================
+   DIV 3 — Footer
+   ============================================= */
+#footer-div {
+  background: var(--green-dark);
+  color: var(--sky);
+  text-align: center;
+  padding: 1.8rem 1rem;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 0.9rem;
+  border-top: 4px solid var(--green-light);
+  margin-top: 2rem;
+}
+
+#footer-div a { color: var(--lime); }
+
+/* Highlight the anchor target section */
+:target {
+  outline: 3px dashed var(--lime);
+  outline-offset: 5px;
+  border-radius: 6px;
+}
+
+/* Back-to-top pill */
+.back-top {
+  display: inline-block;
+  background: var(--green-mid);
+  color: var(--lime) !important;
+  padding: 0.3em 1.1em;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  margin-top: 0.6rem;
+  border: 2px solid var(--lime);
+}
+
+.back-top:hover {
+  background: var(--lime);
+  color: var(--green-dark) !important;
+  text-decoration: none !important;
+}
